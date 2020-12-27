@@ -1,4 +1,4 @@
 FROM tomcat:8
 COPY target/*.war /usr/local/tomcat/webapps/myweb.war
-RUN value=`cat conf/server.xml` && echo "${value//8080/8081}" >| conf/server.xml
+RUN sed -i 's/port="8080"/port="80"/' /usr/local/tomcat/conf/server.xml
 # Added to test webhook
