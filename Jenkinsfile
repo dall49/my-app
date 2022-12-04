@@ -1,3 +1,6 @@
+#!/usr/bin/env groovy
+
+@Library('jenkins-SL')
 def gv
 pipeline {
   agent any
@@ -23,7 +26,8 @@ pipeline {
       
       steps {
         script{
-            gv.buildJar()
+            //gv.buildJar()
+            buildImg()
         }
       }
     }
@@ -32,7 +36,8 @@ pipeline {
       
       steps {
         script{
-            gv.buildImg()
+          //  gv.buildImg()
+          buildImg()
         }
       }
     }
@@ -70,4 +75,4 @@ pipeline {
       }
     }
   }
-} 
+}
