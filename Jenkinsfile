@@ -1,4 +1,4 @@
-/*def gv
+def gv
 pipeline {
   agent any
   tools {
@@ -9,7 +9,7 @@ pipeline {
     booleanParam(name: 'executeTests' , defaultValue: true, description: '')
   } */
   
-  /*stages {
+  stages {
 
     stage("init"){
         steps {
@@ -52,7 +52,7 @@ pipeline {
       }
     }*/
     
-   /* stage("deploy") {
+    stage("deploy") {
        /* input {
             message "Select env to deploy to"
             ok "Done"
@@ -61,7 +61,7 @@ pipeline {
             }
         }*/
       
-    /*  steps {
+      steps {
         script{
             // env.ENV = input message: "Select env to deploy to", ok "Done", parameters: [choice(name: 'ENV' , choices: ['dev', 'staging' , 'prod'], description: '')]
             gv.deployApp()
@@ -70,25 +70,4 @@ pipeline {
       }
     }
   }
-} */
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
+} 
