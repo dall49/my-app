@@ -1,4 +1,4 @@
-/*def buildJar() {
+def buildJar() {
      echo 'building Jar file...'
      sh 'mvn package'
 }
@@ -19,7 +19,7 @@ def buildImg() {
      echo 'testing app...'
 }*/
 
-/*def deployApp() {
+def deployApp() {
      echo 'deploying app...'
      // echo "deploying version ${params.VERSION}"
 }
